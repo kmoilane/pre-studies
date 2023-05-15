@@ -1,35 +1,41 @@
 #include <iostream>
-#include <string>
-#include <vector>
 
 using namespace std;
 
+int sum(int a, int b)
+{
+    std::cout << "Sum of " << a << " and " << b << " is " << a + b << '\n';
+    
+    return 0;
+}
+
+/*
+** Calculates the difference as an absolute value
+*/
+int difference(int a, int b)
+{
+    int diff {};
+
+    diff = a > b ? a - b : b - a;
+    std::cout << "Difference between " << a << " and " << b << " is " << diff
+        << '\n';
+    
+    return 0;
+}
+
 int main()
 {
-    int firstInt;
-    int secondInt;
-    int sum;
-    int difference;
+    int a {};
+    int b {};
 
-    std::cout << "Enter first integer:\n";
-    std::cin >> firstInt;
+    std::cout << "Enter the first integer:\n";
+    std::cin >> a;
 
-    std::cout << "Enter second integer:\n";
-    std::cin >> secondInt;
+    std::cout << "Enter the second integer:\n";
+    std::cin >> b;
 
-    sum = firstInt + secondInt;
-    difference = firstInt > secondInt ? firstInt - secondInt : secondInt - firstInt;
-
-    std::cout << "Sum of " << firstInt << " and " << secondInt << " is " << sum << std::endl;
-    std::cout << "Difference between " << firstInt << " and " << secondInt << " is " << difference << std::endl;
-
-    vector<string> msg = {"Thank you", " for using ", "my ", "program!\n"};
-
-    for (const string& word : msg)
-    {
-        cout << word;
-    }
-    
+    sum(a, b);
+    difference(a, b);
 
     return 0;
 }
