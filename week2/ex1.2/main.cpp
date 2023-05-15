@@ -1,6 +1,6 @@
 #include <iostream>
 
-int sum(double a, double b)
+int printSum(double a, double b)
 {
     std::cout << "Sum of " << a << " and " << b << " is; " << a + b << '\n';
 
@@ -10,7 +10,7 @@ int sum(double a, double b)
 /*
 ** Calculates the difference as an absolute value
 */
-int difference(double a, double b)
+int printDiff(double a, double b)
 {
     double diff { };
 
@@ -32,8 +32,8 @@ int main()
     std::cout << "Enter the second number (any number):\n";
     std::cin >> b;
 
-    sum(a, b);
-    difference(a, b);
+    printSum(a, b);
+    printDiff(a, b);
 
     return 0;
 }
