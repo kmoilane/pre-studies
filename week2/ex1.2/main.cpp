@@ -7,7 +7,9 @@ int sum(double a, double b)
     return 0;
 }
 
-// Calculates the difference as an absolute value
+/*
+** Calculates the difference as an absolute value
+*/
 int difference(double a, double b)
 {
     double diff { };
@@ -32,5 +34,6 @@ int main()
 
     sum(a, b);
     difference(a, b);
+
     return 0;
 }
