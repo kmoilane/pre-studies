@@ -12,10 +12,9 @@ int main()
     std::cout << "Enter the diameter of the circle: \n";
     std::cin >> d;
 
-    r = d / 2;
-
-    area = pi * r * r;
-    c = pi * d;
+    r = d / 2;          // radius is diameter / 2
+    area = pi * r * r;  // area is π * r²
+    c = pi * d;         // circumference is π * d
 
     std::cout << "Area of the circle is: " << area
         << "\nCircumference of the circle is: " << c << '\n';
