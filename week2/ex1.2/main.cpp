@@ -1,39 +1,37 @@
 #include <iostream>
 
-int printSum(double a, double b)
+double askForNumber()
 {
-    std::cout << "Sum of " << a << " and " << b << " is; " << a + b << '\n';
+    double n {};
+    std::cout << "Enter any number: ";
+    std::cin >> n;
+    
+    return n;
+}
 
-    return 0;
+double sum(double a, double b)
+{
+    return a + b;
 }
 
 /*
-** Calculates the difference as an absolute value
+** Calculates and returns the difference as an absolute value
 */
-int printDiff(double a, double b)
+double difference(double a, double b)
 {
-    double diff { };
-
-    diff = a > b ? a - b : b - a;
-    std::cout << "Difference between " << a << " and " << b << " is: " << diff
-        << '\n';
-
-    return 0;
+    return a > b ? a - b : b - a;
 }
 
 int main()
 {
     double a { };
     double b { };
+    a = askForNumber();
+    b = askForNumber();
 
-    std::cout << "Enter the first number (any number):\n";
-    std::cin >> a;
-
-    std::cout << "Enter the second number (any number):\n";
-    std::cin >> b;
-
-    printSum(a, b);
-    printDiff(a, b);
+    std::cout << "Sum of " << a << " and " << b << " is: " << sum(a, b) << '\n';
+    std::cout << "Difference between " << a << " and " << b << " is: "
+        << difference(a, b) << '\n';
 
     return 0;
 }
