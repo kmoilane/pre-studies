@@ -11,6 +11,7 @@ double getValue(std::string_view msg)
     return value;
 }
 
+//  Calculates the BMI in the traditional way (kg/m²)
 double calcBmi(double weight, double length)
 {
     return weight / (length * length);
