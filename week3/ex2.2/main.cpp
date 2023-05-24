@@ -27,7 +27,11 @@ int getFuelType()
         << "\n1 = Gas\n2 = Diesel\n3 = Electric\n";
     std::cin >> fuelType;
 
-    return fuelType;
+    if (fuelType == 1 || fuelType == 2 || fuelType == 3)
+        return fuelType;
+    if (std::cin.fail())
+        std::cin.clear();
+    return getFuelType();
 }
 
 double calcTotalConsumption(double distance, double consumption)
@@ -48,12 +52,20 @@ int main()
     double totalConsumption { calcTotalConsumption(distance, consumption) };
     double cost { };
 
-    if (fuelType == 1)
-        cost = calcCost(totalConsumption, gas);
-    else if (fuelType == 2)
-        cost = calcCost(totalConsumption, diesel);
-    else if (fuelType == 3)
-        cost = calcCost(totalConsumption, electricity);
+    switch (fuelType)
+    {
+        case 1:
+            cost = calcCost(totalConsumption, gas);
+            break;
+        case 2:
+            cost = calcCost(totalConsumption, diesel);
+            break;
+        case 3:
+            cost = calcCost(totalConsumption, electricity);
+            break;
+        default:
+            break;
+    }
 
     std::cout << "Cost for " << distance << "km is: " << cost << "€\n";
     
