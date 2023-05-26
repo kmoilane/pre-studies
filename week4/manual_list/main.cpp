@@ -40,10 +40,6 @@ int getMax(std::vector<int>& vect)
     return max;
 }
 
-/*
-**  Get 
-*/
-
 int getMostFrequent(std::vector<int>& vect)
 {
     int mostFrequent { vect[0] };   // Initialize mostFrequent with first int

@@ -14,9 +14,9 @@ int calcSum(std::vector<int>& vect)
     return result;
 }
 
-int calcAverage(int num, int divider)
+double calcAverage(int num, int divider)
 {
-    return num / divider;
+    return static_cast<double>(num) / divider;
 }
 
 int minMaxDiff(int min, int max)
