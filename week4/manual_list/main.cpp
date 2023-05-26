@@ -40,15 +40,18 @@ int getMax(std::vector<int>& vect)
     return max;
 }
 
+/*
+**  Get 
+*/
+
 int getMostFrequent(std::vector<int>& vect)
 {
-    int mostFrequent { vect[0] };
-    int topCount { 1 };
-    int count { };
+    int mostFrequent { vect[0] };   // Initialize mostFrequent with first int
+    int topCount { 1 };             // There's at least one vect[0] number
 
     for (size_t i = 0; i < vect.size(); ++i)
     {
-        count = 0;
+        int count { 1 };
         for (size_t j = i + 1; j < vect.size(); ++j)
         {
             if (vect[j] == vect[i])
@@ -57,7 +60,10 @@ int getMostFrequent(std::vector<int>& vect)
             }
         }
         if (count > topCount)
+        {
             mostFrequent = vect[i];
+            topCount = count;
+        }
     }
     return mostFrequent;
 }
