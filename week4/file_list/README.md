@@ -1,5 +1,15 @@
 # Integer List (or some other cool name)
 
+This program takes a list of integers from user either as a file or as 
+a manual input. It will store the values inside a vector and output the
+following statistics:
+- The sum of the integers in the list
+- The average of the integers in the list
+- The minimum value in the list
+- The maximum value in the list
+- The most frequent value in the list
+- The difference between the the minimum and maximum of the list
+
 To compile this program you need to have a g++ compiler which supports 
 C++20 standard.
 
