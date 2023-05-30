@@ -7,7 +7,7 @@ following statistics:
 - The average of the integers in the list
 - The minimum value in the list
 - The maximum value in the list
-- The most frequent value in the list
+- The most frequent value or values in the list
 - The difference between the the minimum and maximum of the list
 
 To compile this program you need to have a g++ compiler which supports 
