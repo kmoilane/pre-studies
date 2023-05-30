@@ -21,7 +21,7 @@ void printResults(std::vector<int>& vect)
 
 /*
 **  Reads the file if it's able to open it and pushes numeric values to vector
-**  as an integers. If unable to open the file, goes to prompt a new filename.
+**  as integers. If unable to open the file, goes to prompt a new filename.
 **  Stops reading when other than numeric or white space character is met.
 */
 
