@@ -27,10 +27,12 @@ void printResults(std::vector<int>& vect)
 
 void parseFile(std::string fname)
 {
-    int num;
-    std::vector<int> vect {};
-    std::ifstream intFile;
+    int                 num {};
+    std::vector<int>    vect {};
+    std::ifstream       intFile {};
+
     intFile.open(fname);
+    
     if (intFile.is_open() && !intFile.fail())
     {
         while (intFile >> num)

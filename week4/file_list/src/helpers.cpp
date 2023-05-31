@@ -71,13 +71,13 @@ int findMax(std::vector<int>& vect)
 }
 
 /*
-**  Used to find the most frequent value(s) inside a int vector
+**  Used to find the most frequent value(s) inside an int vector
 */
 
 std::vector<int> findMostFrequent(std::vector<int>& vect)
 {
-    std::vector<int> mFVect { }; // Vector for most frequent value(s)
-    int topCount { 0 };
+    std::vector<int>    mFVect { }; // Vector for most frequent value(s)
+    int                 topCount { 0 };
 
     for (size_t i = 0; i < vect.size(); ++i)
     {
